@@ -32,19 +32,19 @@ body {
 }
 
 .drum_pad {
-
   align-items: center;
   background-color: rgba(0, 0, 0, 0.548);
-  display: inline-table;
-  margin: 10px;
-  border: 1px solid rgb(255, 94, 0);
-  height: 170px;
-  width: 170px;
-  color: rgb(212, 187, 133);
-  text-align: center;
-  font-size: 5rem;
   border-radius: 20px;
+  border: 1px solid rgb(255, 94, 0);
+  color: rgb(212, 187, 133);
+  display: inline-flex;
+  font-size: 5rem;
+  height: 170px;
+  justify-content: center;
+  margin: 10px;
+  text-align: center;
   transition: all .1s;
+  width: 170px;
 }
 
 .drum_pad:hover {
@@ -59,8 +59,10 @@ body {
 
 .drum_description {
   font-size: 1rem;
+  position: relative;
 }
 
 .drum_description::before {
+
   content: '_';
 }
