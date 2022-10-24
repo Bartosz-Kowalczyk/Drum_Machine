@@ -9,8 +9,9 @@
 
 body {
   font-family: 'Varela Round', sans-serif;
+  background-color: black;
   background-image: url(/img/people-at-concert-1105666.jpg);
-  background-repeat:inherit;
+  background-repeat:no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -27,7 +28,7 @@ body {
   margin: 20px;
   padding: 20px;
   position: center;
-  width: 550px;
+  width: 610px;
 }
 
 .drum_pad {
@@ -37,30 +38,29 @@ body {
   display: inline-table;
   margin: 10px;
   border: 1px solid rgb(255, 94, 0);
-  height: 150px;
-  width: 150px;
+  height: 170px;
+  width: 170px;
   color: rgb(212, 187, 133);
   text-align: center;
   font-size: 5rem;
   border-radius: 20px;
+  transition: all .1s;
 }
 
 .drum_pad:hover {
   border: 1px solid rgb(255, 0, 0);
 }
 
-.drum_pad:active {
-  animation: key_click 1s ease;
+.active {
+  transform: scale(.9);
+  box-shadow: -4px 4px 25px 0px rgba(255,0,0,0.97);
+  color: aliceblue;
 }
 
+.drum_description {
+  font-size: 1rem;
+}
 
-/* ======= ANIMATIONS ==================================== */
-
-@keyframes key_click {
-  50% {
-    transform: scale(.8);
-  }
-  100% {
-    transform: scale(1);
-  }
+.drum_description::before {
+  content: '_';
 }

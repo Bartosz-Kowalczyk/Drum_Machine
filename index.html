@@ -13,16 +13,55 @@
 </head>
 <body>
   <section class="drum_pads">
-    <div class="drum_pad q">Q</div>
-    <div class="drum_pad w">W</div>
-    <div class="drum_pad e">E</div>
-    <div class="drum_pad a">A</div>
-    <div class="drum_pad s">S</div>
-    <div class="drum_pad d">D</div>
-    <div class="drum_pad z">Z</div>
-    <div class="drum_pad x">X</div>
-    <div class="drum_pad c">C</div>
+    <div class="drum_pad" data-key="KeyQ">
+      <kbd>Q</kbd>
+      <span class="drum_description">open hihat</span>
+    </div>
+    <div class="drum_pad" data-key="KeyW">
+      <kbd>W</kbd>
+      <span class="drum_description">bongo</span>
+    </div>
+    <div class="drum_pad" data-key="KeyE">
+      <kbd>E</kbd>
+      <span class="drum_description">cymbale</span>
+    </div>
+    <div class="drum_pad" data-key="KeyA">
+      <kbd>A</kbd>
+      <span class="drum_description">hihat</span>
+    </div>
+    <div class="drum_pad" data-key="KeyS">
+      <kbd>S</kbd>
+      <span class="drum_description">kick</span>
+    </div>
+    <div class="drum_pad" data-key="KeyD">
+      <kbd>D</kbd>
+      <span class="drum_description">snare</span>
+    </div>
+    <div class="drum_pad" data-key="KeyZ">
+      <kbd>Z</kbd>
+      <span class="drum_description">rim shot</span>
+    </div>
+    <div class="drum_pad" data-key="KeyX">
+      <kbd>X</kbd>
+      <span class="drum_description">shake</span>
+    </div>
+    <div class="drum_pad" data-key="KeyC">
+      <kbd>C</kbd>
+      <span class="drum_description">clap</span>
+    </div>
   </section>
+
+  <audio data-key="KeyQ" src="/sounds/open_hihat.WAV"></audio>
+  <audio data-key="KeyW" src="/sounds/bongo.wav"></audio>
+  <audio data-key="KeyE" src="/sounds/cymbale.WAV"></audio>
+  <audio data-key="KeyA" src="/sounds/hihat.WAV"></audio>
+  <audio data-key="KeyS" src="/sounds/kick.WAV"></audio>
+  <audio data-key="KeyD" src="/sounds/snare.WAV"></audio>
+  <audio data-key="KeyZ" src="/sounds/rim_shot.wav"></audio>
+  <audio data-key="KeyX" src="/sounds/shake.wav"></audio>
+  <audio data-key="KeyC" src="/sounds/clap.wav"></audio>
+
+<script src="/scripts/index.js" async></script>
 
 </body>
 </html>
