@@ -12,7 +12,7 @@ body {
   background-color: black;
   background-image: url(/img/people-at-concert-1105666.jpg);
   background-repeat:no-repeat;
-  background-size: cover;
+  background-size:200vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,19 +32,19 @@ body {
 }
 
 .drum_pad {
-
   align-items: center;
   background-color: rgba(0, 0, 0, 0.548);
-  display: inline-table;
-  margin: 10px;
-  border: 1px solid rgb(255, 94, 0);
-  height: 170px;
-  width: 170px;
-  color: rgb(212, 187, 133);
-  text-align: center;
-  font-size: 5rem;
   border-radius: 20px;
+  border: 1px solid rgb(255, 94, 0);
+  color: rgb(212, 187, 133);
+  display: inline-flex;
+  font-size: 5rem;
+  height: 170px;
+  justify-content: center;
+  margin: 10px;
+  text-align: center;
   transition: all .1s;
+  width: 170px;
 }
 
 .drum_pad:hover {
@@ -59,8 +59,55 @@ body {
 
 .drum_description {
   font-size: 1rem;
+  position: relative;
 }
 
 .drum_description::before {
-  content: '_';
+
+  content: '#';
+}
+
+
+/* ======= MEDIA QUERIES ==================================== */
+
+@media screen and (max-width: 620px) {
+
+  .drum_pads {
+    height: 275px;
+    width: 65vw;
+  }
+
+  .drum_pad {
+    height: 85px;
+    width: 85px;
+    font-size: 1rem;
+  }
+
+  kbd {
+    display: none;
+  }
+
+}
+
+@media screen and (max-height: 620px) {
+
+  .drum_pads {
+    margin: 0;
+    height: 90vh;
+    width: 90vw;
+    display :table;
+    flex-direction: row;
+    justify-content:space-around;
+  }
+
+  .drum_pad {
+    height: 20vh;
+    font-size: 1rem;
+    margin: 10px;
+  }
+
+  kbd {
+    display: none;
+  }
+
 }

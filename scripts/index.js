@@ -7,6 +7,17 @@ window.addEventListener('keydown', function(event) {
     key.classList.add('active')
 });
 
+
+function play () {
+    const key = this.dataset.key;
+    const audio = document.querySelector(`audio[data-key='${key}']`);
+    if (!audio) return;
+    audio.currentTime = 0;
+    audio.play();
+    this.classList.add('active');
+};
+
+
 function class_remove(event) {
     if(event.propertyName !== 'transform') return;
     this.classList.remove('active');
@@ -14,3 +25,4 @@ function class_remove(event) {
 
 const keys = document.querySelectorAll('.drum_pad');
 keys.forEach(key => key.addEventListener('transitionend', class_remove));
+keys.forEach(key => key.addEventListener('click', play));
