@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
 /* ======= GENERAL ==================================== */
 
 * {
@@ -6,36 +8,59 @@
 }
 
 body {
+  font-family: 'Varela Round', sans-serif;
   background-image: url(/img/people-at-concert-1105666.jpg);
-  background-repeat: no-repeat;
+  background-repeat:inherit;
   background-size: cover;
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
 }
 
 /* ======= DRUM PADS ==================================== */
 
 .drum_pads {
-  display: inline-table;
-  align-items: center;
-  border-radius: 20px;
-  margin: 20px;
-  width: auto;
-  height: auto;
   background-color: rgba(0, 0, 0, 0.185);
+  border-radius: 20px;
+  display: inline-table;
+  height: 550px;
+  margin: 20px;
+  padding: 20px;
+  position: center;
+  width: 550px;
 }
 
 .drum_pad {
+
+  align-items: center;
   background-color: rgba(0, 0, 0, 0.548);
   display: inline-table;
   margin: 10px;
   border: 1px solid rgb(255, 94, 0);
   height: 150px;
   width: 150px;
-  color: azure;
-  align-content: center;
+  color: rgb(212, 187, 133);
   text-align: center;
   font-size: 5rem;
   border-radius: 20px;
+}
+
+.drum_pad:hover {
+  border: 1px solid rgb(255, 0, 0);
+}
+
+.drum_pad:active {
+  animation: key_click 1s ease;
+}
+
+
+/* ======= ANIMATIONS ==================================== */
+
+@keyframes key_click {
+  50% {
+    transform: scale(.8);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
