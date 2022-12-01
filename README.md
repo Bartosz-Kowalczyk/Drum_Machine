@@ -1,9 +1,8 @@
 # Drum_Machine
 
-Super simple drum machine maked with HTML, CSS and pure JS.
+Super simple drum machine maked with HTML, CSS and vanilla JS.
 
 ## Instalation
 
-Just copy all files to your web server.
-No SDK and/or framework needed.
+Just copy the code. No libraries and/or framework needed.
 
